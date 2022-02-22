@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+</head>
+<body>
+    
+    <h1 class="titulo">Esto es un titulo</h1>
+
+
+    <input type="text" class="input">
+    <script>
+        //Hacemos que titulo pille el titulo del h1 por la class
+        const titulo = document.querySelector(".titulo");
+
+//Lo que estamos haciendo es darle un atributo seguido de su propiedad
+    titulo.setAttribute("dir","lfr")
+                    //Hay -> contentEditable (contenido editable)
+                    //dir ->lo que hace es la direccion
+                    //hidden ->lo esconde / true
+                    //tabindex, 0-> para que se pueda seleccionar
+                    //title, lo_que_le_añades -> lo que haces es cambiar el titulo
+                    
+    //con titulo.removeAttributo eliminamos el atributo que definamos
+
+    ////////////////////////////////////////////////////////
+    const input = document.querySelector(".input");
+
+    document.write(input.className)//con esto accedemos al nombre de la clase
+    document.write(input.value)//Nos muestra lo que hay dentro
+    document.write(input.type = "number")//Lo quye hacemos es sacar el tipo o editarlo
+    document.write(input.minLength = "43")//No podra tener menos de 43 caract
+    input.placeholder = "hola";//Con esto saca detras un hola (input para añadir texto)
+    input.required =" "; //Hace que se requiera el campo 
+
+    </script>
+</body>
+</html>

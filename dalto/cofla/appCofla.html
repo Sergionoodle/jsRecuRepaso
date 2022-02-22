@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones</title>
+</head>
+<body>
+    <script>
+        class App{
+            constructor(descargas, puntuacion, peso){
+                this.descargas = descargas;
+                this.puntuacion = puntuacion;
+                this.peso = peso;
+
+                this.iniciada = false;
+                this.instalada = false;
+
+            }
+            abrir(){
+                if(this.iniciada == false){
+                    this.iniciada = true;
+                    alert("App iniciada");
+                }else{
+                    alert("La app no fue iniciada");
+                }
+            }
+            cerrar(){
+                if(this.iniciada == true){
+                    alert("Cerrando");
+                    this.iniciada = false;
+                }else{
+                    alert("la app no esta iniciada")
+                }
+            }
+            instalar(){
+                if(this.instalada == false){
+                    this.instalada = true;
+                    alert("APP instalada")
+                }else{
+                    alert("APp no instalada")
+                }
+            }
+            desinstalar(){
+                if(this.instalada == true){
+                    this.instalada = false;
+                    alert("Des instalando")
+                }else{
+                    alert("No existe")
+                }
+            }
+            info(){
+                alert("App de "+ this.descargas+ " con "+ this.puntuacion+ " y pesa "+this.peso)
+            }
+        
+        }
+
+        app = new App("690 descargas", "8 estrellas", "10gb");
+
+        app.info();
+        app.desinstalar();
+        app.instalar();
+        app.cerrar();
+        app.abrir();
+        app.cerrar();
+    </script>
+</body>
+</html>

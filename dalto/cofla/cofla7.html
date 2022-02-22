@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let trabajo = "240 minutos de trabajo";
+        let estudio = "100 minutos de estudio";
+        let tp = "100 minutos de hacer trabajos";
+        let homework = "30 minutos de cosas";
+        let descando = "10 minutos de descanso";
+
+        console.log("TAREAS");
+
+        for (let i = 0; i < 14; i++) {
+            if (i == 0) {
+                console.groupCollapsed("semana 1")
+            }
+            console.group("dia " + (1 + i));
+            console.log(trabajo);
+            console.log(descando);
+            console.log(estudio);
+            console.log(tp);
+            console.log(homework);
+            console.groupEnd();
+            if (i == 7) {
+                console.groupEnd();
+                console.groupCollapsed(" semana 2 ")
+            }
+        }
+        console.groupEnd();
+        console.groupEnd();
+
+
+    </script>
+</body>
+
+</html>

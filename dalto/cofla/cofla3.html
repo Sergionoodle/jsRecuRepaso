@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos_Cofla</title>
+</head>
+<body>
+    <script>
+        //Creamos un sistema para mostrar las particularidades de los moviles
+        //Cada uno tiene un color, peso, resol, resol camara, ram
+        //Todos pueden encender, apagar,riniciar, tomar fotos y grabar
+
+        class celulares{
+            
+            constructor(color, peso, resolucion, resol_camara, ram){
+                this.color = color;
+                this.peso = peso;
+                this.resolucion = resolucion;
+                this.resol_camara = resol_camara;
+                this.ram = ram;
+
+                this.encendido = false;
+            }
+
+            encender(){
+                if(this.encendido == false){
+                    alert("Encendiendo");
+                    this.encendodp = true;
+                }
+            }
+
+            apagar(){
+                if(this.encendido == true){
+                    alert("Apagando el telefono");
+                    this.encendido = false;
+                }
+            }
+
+            reinicio(){
+                alert("REINICIANDO");
+            }
+
+            fotografiar(){
+                alert("Fotografia sacada a una resolucion de "+this.resol_camara)
+            }
+
+            grabacion(){
+                alert("Grabando")
+            }
+            toString(){
+                alert("Movil "+this.color+" de "+this.peso+" con una resolucion de "+this.resolucion+" y en camara de "+this.resol_camara+ " con "+this.ram+" de ram")
+            }
+
+        }
+
+      // telefono = new celulares("rojo","150gm","1080p","720","16GB");
+      // telefono.encender();
+      // telefono.reinicio();
+      // telefono.fotografiar();
+      // telefono.toString();
+
+      //Todas estas cualidades en los de alta gama con una camara extra y recon facial
+
+      class AltaGama extends celulares{
+        constructor(color, peso, resolucion, resol_camara, ram, cam_extra, resol_extra){
+            super(color, peso, resolucion, resol_camara, ram);
+            this.cam_extra = cam_extra;
+            this.resol_extra = resol_extra;
+        }
+        grabacionLenta(){
+            alert("estas grabando en camara lenta");
+        }
+        
+        reconocimientoFacial(){
+            alert("Reconociendo");
+        }
+
+        toString2(){
+            return this.toString() + " la resolucion de la camara extra es de "+ this.resol_extra;
+        }
+      }
+
+      alta = new AltaGama("gold", "1gm", "4k", "4k", "125GB", "1", "1800");
+      alta.reconocimientoFacial()
+      alta.encender();
+      alta.toString2();
+    </script>
+</body>
+</html>

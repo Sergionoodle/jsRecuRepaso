@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let materias = {
+            fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
+            programacion: ["Dalto", "pedro", "juan", "pepito"],
+            logica: ["Hernandez", "pedro", "juan", "pepito", "cofla", "maria"],
+            quimica: ["Rodriguez", "pedro", "juan", "pepito", "cofla", "maria"]
+        }
+
+        function materiaInscribir(alumno, materia) {
+            personas = materias[materia];
+
+            if (personas.length >= 20) {
+                document.write("Hay mas de 20 personas, lo siento <b>" + alumno + "</b> las clases de <b>" + materia + "</b> estan llenas.");
+
+            } else {
+                personas.push(alumno);
+                if (materia == "fisica") {
+                    materias = {
+                        fisica: personas,
+                        programacion: ["Dalto", "pedro", "juan", "pepito"],
+                        logica: ["Hernandez", "pedro", "juan", "pepito", "cofla", "maria"],
+                        quimica: ["Rodriguez", "pedro", "juan", "pepito", "cofla", "maria"]
+                    }
+
+                } else if (materia == "programacion") {
+                    materias = {
+                        fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
+                        programacion: personas,
+                        logica: ["Hernandez", "pedro", "juan", "pepito", "cofla", "maria"],
+                        quimica: ["Rodriguez", "pedro", "juan", "pepito", "cofla", "maria"]
+                    }
+
+                } else if (materia == "logica") {
+                    materias = {
+                        fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
+                        programacion: ["Dalto", "pedro", "juan", "pepito"],
+                        logica: personas,
+                        quimica: ["Rodriguez", "pedro", "juan", "pepito", "cofla", "maria"]
+                    }
+
+                } else if (materia == "quimica") {
+                    materias = {
+                        fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
+                        programacion: ["Dalto", "pedro", "juan", "pepito"],
+                        logica: ["Hernandez", "pedro", "juan", "pepito", "cofla", "maria"],
+                        quimica: personas
+                    }
+                }
+
+                document.write("<br>El alumno <b>" + alumno + "</b> se ha inscrito a <b>" + materia + "</b> correctamente")
+            }
+        }
+
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+        materiaInscribir("pedro", "fisica")
+
+        document.write("<br>"+materias["fisica"])
+    </script>
+</body>
+
+</html>

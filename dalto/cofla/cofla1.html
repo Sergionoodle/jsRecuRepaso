@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofla 1</title>
+</head>
+
+<body>
+    <h1>HELADO</h1>
+    <script>
+        /*3 chicos de 23 años entran a una heladeria a comprar, problema ->
+        los precios no estan al lado de cada estante, quieren el mas caro
+        roberto tiene -> 1.5
+        pedro tiene -> 1.7
+        cofla tiene -> 3
+        
+        helados:
+        h1 -> 0.6
+        h2 -> 1
+        h3 -> 1.6
+        h4 -> 1.7
+        h5 -> 1.8
+        h6 -> 2.9
+        h7 -> 2.9
+        SOLUCION -> pedir ingrdientes un monton y mostrar helado mas caro */
+
+        //ingresamos un dato por prompt
+        //     let montonR = prompt("cuanto dinero tienes? roberto");
+        //     let montonP= prompt("cuanto dinero tienes? Pedro");
+        let montonC = prompt("cuanto dinero tienes? cofla");
+
+        //Condiciones de los helados
+        if (montonC >= 0.6 && montonC < 1) {
+            alert("Puedes comprar el helado 1")
+            alert("Te sobra " + (montonC - 0.6) + "€")
+        } else if (montonC >= 1 && montonC < 1.6) {
+            alert("Puedes comprar el helado 2")
+            alert("Te sobra " + (montonC - 1) + "€")
+
+        } else if (montonC >= 1.6 && montonC < 1.7) {
+            alert("Puedes comprar el helado 3")
+            alert("Te sobra " + (montonC - 1.6) + "€")
+
+        } else if (montonC < 0.6) {
+            alert("No tienes dinero suficiente")
+        } else if (montonC >= 1.7 && montonC < 1.8) {
+            alert("Puedes comprar el helado 4")
+            alert("Te sobra " + (montonC - 1.7) + "€")
+
+        } else if (montonC >= 1.8 && montonC < 2.9) {
+            alert("Puedes comprar el helado 5")
+            alert("Te sobra " + (montonC - 1.8) + "€")
+
+        } else if (montonC >= 2.9) {
+            alert("Puedes comprar el helado 6 o 7")
+            alert("Te sobra " + (montonC - 2.9) + "€")
+
+        }
+/*
+               if(montonP >= 0.6 && montonP < 1){
+                    alert("Puedes comprar el helado 1 ")
+               }else if(montonP >= 1 && montonP < 1.6){
+                alert("Puedes comprar el helado 2")
+               }else if(montonP >= 1.6 && montonP < 1.7){
+                   alert("Puedes comprar el helado 3")
+               }else if(montonP < 0.6){
+                   alert("No tienes dinero suficiente")
+               }else if(montonP >= 1.7 && montonP < 1.8){
+                   alert("Puedes comprar el helado 4")
+               }else if(montonP >= 1.8 && montonP < 2.9){
+                   alert("Puedes comprar el helado 5")
+               }else if(montonP >= 2.9){
+                   alert("Puedes comprar el helado 6 o 7")
+               }
+        
+               if(montonR >= 0.6 && montonR < 1){
+                    alert("Puedes comprar el helado 1 ")
+               }else if(montonR >= 1 && montonR < 1.6){
+                alert("Puedes comprar el helado 2")
+               }else if(montonR >= 1.6 && montonR < 1.7){
+                   alert("Puedes comprar el helado 3")
+               }else if(montonR < 0.6){
+                   alert("No tienes dinero suficiente")
+               }else if(montonR >= 1.7 && montonR < 1.8){
+                   alert("Puedes comprar el helado 4")
+               }else if(montonR >= 1.8 && montonR < 2.9){
+                   alert("Puedes comprar el helado 5")
+               }else if(montonR >= 2.9){
+                   alert("Puedes comprar el helado 6 o 7")
+               }
+        */
+    </script>
+</body>
+
+</html>

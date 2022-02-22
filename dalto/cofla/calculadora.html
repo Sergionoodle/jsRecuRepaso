@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Calculadora
+        
+        const sumar = (num1, num2)=>{
+            return alert(parseInt(num1)+parseInt(num2))
+        }
+
+        const resta = (num1, num2)=>{
+            return alert(parseInt(num1)-parseInt(num2))
+        }
+
+        const dividir = (num1, num2)=>{
+            return alert(parseInt(num1)/parseInt(num2))
+        }
+
+        const multiplicar = (num1, num2)=>{
+            return alert(parseInt(num1)*parseInt(num2))
+        }
+
+        alert("Que operacion quieres hacer?");
+        let operacion = prompt("1->suma, 2->resta, 3->division, 4->multiplicacion");
+
+        if(operacion == 1){
+            let numero1 = prompt("Primer numero para operar");
+            let numero2 = prompt("Segundo numero para operar")
+
+            sumar(numero1, numero2);
+        }else if(operacion == 2){
+            let numero1 = prompt("Primer numero para operar");
+            let numero2 = prompt("Segundo numero para operar")
+
+            resta(numero1, numero2);
+        }else if(operacion == 3){
+            let numero1 = prompt("Primer numero para operar");
+            let numero2 = prompt("Segundo numero para operar")
+
+            dividir(numero1, numero2);
+        }else if(operacion == 4){
+            let numero1 = prompt("Primer numero para operar");
+            let numero2 = prompt("Segundo numero para operar")
+
+            multiplicar(numero1, numero2);
+        }else{
+            alert("No pongas huevadas")
+        }
+
+    </script>
+</body>
+</html>

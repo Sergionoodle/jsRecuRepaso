@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COfla y la fiesta</title>
+</head>
+<body>
+    <script>
+        //Gana la loteria, hace una fiesta el mister y compra una maquina que
+        //deja pasar solamente a los mayores de edad, entre otras cosas
+        //solo mayores de edad y la primera persona a las 2AM no paga
+
+        //Cuando sea true sale gratis
+        let free = false;
+        function fiesta(hora){
+            let edad = prompt("Cual es tu edad?");
+            
+            if(edad >= 18){
+                alert("Puedes pasar");
+                if(hora >= 2 && hora < 7 && free === false){
+                    alert("Puedes pasar gratis");
+                    free = true;
+                }else{
+                    alert("Puedes pasar pero no gratis, son 5€")
+                }
+            }else{
+                alert("Eres un desgraciado menor de edad");
+            }
+
+        }
+
+        let pregunta = prompt("Que hora es?");
+
+        fiesta(pregunta);
+
+    </script>
+</body>
+</html>

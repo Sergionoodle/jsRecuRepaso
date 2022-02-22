@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parrafo">Hola estas en un parrafo</p>
+
+    <input type="text" name="hola" class="input">
+    <label for="">Rango de edad</label>
+    <script>
+        //Pillar elementos por el id
+        document.getElementById('parrafo');
+
+        //Pillar el elemento por la etiqueta (conseguira todas)
+        parrafo = document.getElementsByTagName('p')//Nombre de etiqueta
+        //con parrafo[0] saca el parrafo 1 
+
+        //Seleccion del objeto segun queri selector
+        //con class .xxxx y con id #xxx
+        document.querySelector('#parrafo')
+
+        document.querySelectorAll("#parrafo")//Lo mismo pero se trata como una lista
+        //parrafo[0]
+
+
+        //DEFINIR OBTENER Y ELIMINAR
+
+        //Modificar el valor del atributo
+        modif = document.querySelector(".input");//Pillamos el input
+
+        //              Lo que queremos modificar, a que queremos mod
+        modif.setAttribute("type","color");
+
+        //Pillar por atributo
+        modif.getAttribute("type")//Sacamos el atributo type que lleva
+
+        //Eliminar el valor del atributo
+        modif.removeAttribute('type') 
+    </script>
+</body>
+</html>

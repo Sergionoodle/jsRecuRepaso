@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const materias = {
+            fisica: [90,6,3,"fisica"],
+            matematica: [84,8,2,"amtematica"],
+            logica: [90,6,3,"logica"],
+            quimica: [75,6,2,"quimica"],
+            calculo: [90,6,4,"calculo"],
+            programacion: [86,6,1,"programacion"],
+            biologia: [79,6,2,"biologia"],
+            bdd: [98,9,4,"bdd"],
+            algebra: [89,6,1,"algebra"]
+        }
+
+        function Aprobado(){
+            for(materia in materias){
+                materias[materia][2];
+
+                let asistancias = materias[materia][0];
+                let promedio = materias[materia][1];
+                let trabajos = materias[materia][2];
+
+                console.log(materias[materia][3]);
+
+                if(asistancias >= 90){
+                    console.log("%c   Aprobado","color:green");
+                }else{
+                    console.log("%c   Suspendido","color:red");
+                }
+
+                if(promedio >= 7){
+                    console.log("%c  Trabajos aprobados","color:green");
+                }else{
+                    console.log("%c  Trabajos suspendidos","color:red");
+                }
+
+                if(trabajos >= 3){
+                    console.log("%c   Examenes aprobados","color:green");
+                
+                }else{
+                    console.log("%c   Examenes suspendidos", "color:red");
+                }
+            }
+        }
+
+        Aprobado();
+
+    </script>
+</body>
+
+</html>
