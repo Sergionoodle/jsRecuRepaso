@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mapaRepeticiones(array){
+            if(!(array instanceof Array)){
+                return null;
+            }else{
+                let mapa = new Map();
+
+                for(let clave of array){
+                    if(mapa.get(clave) != undefined){
+                        mapa.set(clave,mapa.get(clave)+1);
+                    }else{
+                        mapa.set(clave, 1);
+                    }
+                }
+                return mapa;
+            }
+        }
+
+        const arrayPalabras = [];
+        let mapa;
+
+        var palabra = prompt('Escribe una palabra');
+
+        while(palabra != null && palabra != ""){
+            arrayPalabras.push(palabra);
+            palabra = prompt("Escribe una palabra");
+        }
+
+        arrayPalabras.sort((a,b)=>(a.localeCompare(b, 'es')));
+
+        mapa = mapaRepeticiones(arrayPalabras);
+
+        for([palabra,cont] of mapa){
+            document.write("<p>"+palabra+","+cont+" repeticiones")
+        }
+    </script>
+</body>
+</html>

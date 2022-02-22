@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Creamos una variable
+        var respuesta;
+
+        //Hacemos un bucle que mientras la respuesta sea 0 o un numero formule la pregunta
+        do{
+            //Metemos el prompt en una variable
+            respuesta = prompt("Escribe el numero de asteriscos");
+        }while(isNaN(Number(respuesta)) || respuesta < 0)
+
+//Recorremos la respuesta
+        for(let i = 1; i < respuesta; i++){
+            //Cada salto que hacemos le pintamos un *
+            for(let j = 1; j < i; j++){
+                document.write("* ")
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

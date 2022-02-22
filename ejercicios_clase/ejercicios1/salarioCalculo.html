@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Salario</h1>
+    <script>
+        let nombre = prompt("Nombre");
+        let apellido = prompt("apellido");
+        let salario = prompt("salario");
+        let edad = prompt("Edad");
+
+        document.write("<p>"+nombre+" "+apellido+"</p>");
+        document.write("<p>De "+edad+" años</p>");
+        document.write("<p>Gana</p>");
+        if(salario > 2000){
+            document.write(salario);
+        }else if(salario >= 1000 && salario <= 2000){
+            if(edad > 45){
+                document.write(salario +" y sube un 3%")
+            }else{
+                document.write(salario +" y sube un 10%")
+
+            }
+        }else if(salario < 1000){
+            if(edad < 30){
+                document.write("1100");
+            }else if(edad => 30 && edad <= 45){
+                document.write(salario + " sube un 3%")
+            }else if(edad > 45){
+                document.write(salario + " mas un 15%")
+            }
+        }
+    
+    
+    </script>
+</body>
+</html>

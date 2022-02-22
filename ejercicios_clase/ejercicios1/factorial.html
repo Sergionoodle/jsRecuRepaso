@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Declaramos las variables
+        var respuesta;
+        var factorial = 1;
+
+        respuesta = prompt("Indica un numero ")
+
+        if(respuesta < 0 || isNaN(Number(respuesta))){
+            alert("El numero introducido no es valido ")
+        }else{
+            for(let i = 1; i <= respuesta; i++){
+                factorial*=i;
+            }
+            alert("El factorial de "+respuesta+" es "+factorial)
+        }
+    </script> 
+</body>
+</html>

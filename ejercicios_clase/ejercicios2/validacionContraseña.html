@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Declaracion de variables
+    let nombre, contra;
+    let seguir = true;
+    let nombreOk = true;
+    let contraOk;
+    let minusculas = false;
+    let mayusculas = false;
+    let numero = false;
+    let otro = false;
+    let caracter;
+    let minus = 'aáàbcçdeéèfghiíìjklmnñoóòpqrstuúùüvwxyz';
+    let numeros = '0123456789';
+
+    //Hacer mientras seguir y nombre es OK
+    do{
+
+        nombre = prompt("Escribe tu nombre");
+
+        //Condicion si nombre es null que pase seguir a false
+        if(nombre == null){
+            seguir = false;
+        }
+
+        //Si seguir es true 
+        if(seguir){
+            let contador = 0;
+            let numMayu = 0;
+            let numNum = 0;
+            let numSim = 0;
+            nombreOk = true;
+
+            //Mientras contador sea menot que el nombre
+            while(contador < nombre.length){
+
+                //Se comprueba que no tenga minusculas
+                if(minus.indexOf(nombre.charAt(contador)) == -1){
+
+                    //Se comprueba que no tenga mayusculas
+                    if(minus.toUpperCase().indexOf(nombre.charAt(contador)) != -1){
+                        numMayu++;
+                    //Se comprueba que no tenga numeros 
+                    }else if(numeros.indexOf(nombre.charAt(contador)) != -1){
+                        numNum++;
+                    }else{
+                        numSim++;
+                    }
+                }
+                contador++;
+            }
+
+            //Si hay mayusculas, algun numero o un simbolo da error
+            if(numMayu > 0 || numNum == 0 || numSim > 0){
+                nombreOk = false;
+                alert("El usuario es incorrecto")
+            }
+        }
+
+    }while(seguir && !nombreOk);
+
+    //Si se continua
+    if(seguir){
+
+        //Mientras no se le de a cancelar que haga esto 
+        do{
+
+            //Creamos las variables
+            hayMin = false;
+            hayMayu = false;
+            hayNum = false;
+            hayOtro = false;
+
+            //Metemos el valor de la contraseña
+            contra = prompt("Escribe tu contraseña")
+
+            //Si le da a salir que finalize
+            if(contra == null){
+                seguir = false;
+            }
+
+            //Si sigue que compruebe
+            if(seguir){
+
+                //ContraOk significa que esta como queremos
+                contraOk = true;
+
+                //Contador
+                let i = 0;
+
+                //Mientras contraseña ok y i sea menor que la largaria de la contra haz esto
+                while(contraOk && i < contra.length){
+                    caracter = contra.charAt(i);
+
+                    //Comprobamos que tenga una minuscula
+                    if(minus.indexOf(caracter) != -1){
+                        hayMin = true;
+
+                    //Comprobamos que tenga una mayuscula
+                    }else if(minus.toUpperCase().indexOf(caracter) != -1){
+                        hayMayu = true;
+
+                    //Comprobamos que tenga un numero
+                    }else if(numeros.indexOf(caracter) != -1){
+                        hayNum = true;
+
+                    //Comprobamos que tenga algun caracter
+                    }else{
+                        hayOtro = true;
+                    }
+                    i++;
+                }
+
+                //Si todo es true esta OK
+                contraOk = (hayMin && hayNum && hayOtro && hayMayu);
+
+                //Si no hay un false y da error
+                if(!contraOk){
+                    alert("La contraseña no cumple los requisitos")
+                }
+            }
+
+
+        }while(seguir && !contraOk);
+    }
+
+
+
+    if(seguir){
+        document.write("<p>Se almacenó la informacion </p>");
+
+    }else{
+        document.write("<p>La operacion ha sido cancelada</p>")
+    }
+
+
+    </script>
+</body>
+</html>

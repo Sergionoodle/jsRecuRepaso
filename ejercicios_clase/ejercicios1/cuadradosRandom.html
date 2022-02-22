@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Declaramos las variables
+        var rojo;
+        var verde;
+        var azul;
+        var arriba;
+        var izq;
+        const ancho = 50;
+        const alto = 50;
+        const maxCuadrados = 2000;
+
+        //Hacemos el for
+        for (let i = 1; i <= maxCuadrados; i++) {
+
+            //Sacamos el color random, las posiciones random
+            rojo = parseInt(Math.random() * 256);
+            verde = parseInt(Math.random() * 256);
+            azul = parseInt(Math.random() * 256);
+            izq = parseInt(Math.random() * 100);
+            arriba = parseInt(Math.random() * 100);
+
+            document.write(`<div id='fondo' ` +
+                `style='background-color:rgb(${rojo},${verde},${azul});` +
+                `left:${izq}%;top:${arriba}%;width:${ancho}px;height:${alto}px' ` +
+                `></div>`)
+        }
+    </script>
+</body>
+
+</html>

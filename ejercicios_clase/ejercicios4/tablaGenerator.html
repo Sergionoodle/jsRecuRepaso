@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function dibujarTabla(nFilas = 10, nCols=4, color = 'black'){
+
+            document.write(`<table style='border-collapse:collapse:collapse;` +
+        `border:3px solid ${color};width:100%;'`);
+
+                for(let j = 1; j <= nFilas; j++){
+                    document.write("<tr>");
+
+                        for(let i = 1; i <= nCols; i++){
+
+                            document.write(`<td style='border:1px solid ${color}'>&nbsp;</td>`);
+                        }
+                        document.write("</tr>")
+                }
+                document.write("</table>")
+
+        }
+
+        dibujarTabla();
+
+        dibujarTabla(20,10);
+
+        for(let i = 1; i <= 10; i++){
+            dibujarTabla(4,5,'green')
+        }
+    </script>
+</body>
+</html>

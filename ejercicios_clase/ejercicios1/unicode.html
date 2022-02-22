@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width:100%;
+        }
+        td {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <script>
+        //Declaramos las variables
+        var cantidad = 1000;
+        var codigo = 1;
+
+        //Generamos los codigos
+        for(let j = 1; j <= cantidad/10; j++){
+//Hacemos que se dibuje el tr
+            document.write("<tr>");
+//Hacemos que nos dibuje lo de dentro mas el unicode 
+            for(let k = 1; k <= 10; k++){
+                document.write(`<td>${codigo}</td><td>&#${codigo}</td>`);
+                codigo++;
+            }
+            document.write("</tr>")
+        }
+    </script>
+    </table>
+</body>
+</html>

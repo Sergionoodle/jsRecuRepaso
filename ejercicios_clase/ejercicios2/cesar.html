@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Creamos las variables
+        var texto, clave;
+        var cifra;
+        var textoCifrado = "";
+
+        texto = prompt("Escribe el texto que quieras cifrar")
+
+        do{
+            clave = prompt("Escribe la clave con la que quieres cifrar");
+
+            if(isNaN(Number(clave))){
+                alert("No has escrito un numero ")
+            }
+        }while(isNaN(Number(clave)))
+
+        clave = parseInt(clave);
+
+        for(i = 0; i < texto.length; i++){
+            cifra = texto.charCodeAt(i) + clave;
+            document.write(String.fromCharCode(cifra))
+        }
+    </script>
+</body>
+</html>

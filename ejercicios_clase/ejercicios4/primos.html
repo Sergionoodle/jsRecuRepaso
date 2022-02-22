@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Generamos numeros primos 
+
+        
+        function esPrimo(numero){
+            if(numero < 1){
+                return false;
+            }else if(numero == 1){
+                return true;
+            }
+
+            for(let i = 2; i*i <= numero; i++){
+                if(numero%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        document.write("<p>1</p><p>2</p>");
+
+        for(let i = 3; i < 1000; i+=2){
+            if(esPrimo(i)){
+                document.write("<p>"+i+"</p>")
+            }
+        }
+    </script>
+</body>
+</html>

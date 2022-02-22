@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Declaramos las variables
+        var cont, numero;
+        
+        //Creamos un mapa 
+        let mapa = new Map();
+        const MAX_FREQ = 10;
+        const MAX_REPETI = 1000;
+
+        //Recorremos las frecuencias y las vamos metiendo en el mapa
+        for(i = 0; i <= MAX_FREQ; i++){
+            mapa.set(i, 0)
+                    //CLAVE - VALOR
+        }
+     
+        //Recorremos las repeticiones
+        for(i = 1; i <= MAX_REPETI; i++){
+            numero = parseInt(Math.random()*10)+1;
+
+            mapa.set(numero, (mapa.get(numero) + 1))
+        }
+      
+        //En el primer set se le mete el numero de la clave, y el valor se da
+        //Cuando se hace el segundo
+
+        document.write("<h1>FRECUENCIAS</h1>");
+        document.write("<ul>")
+        for(i = 1; i < MAX_FREQ; i++){
+            document.write(`<li><strong>Número ${i}:</strong> ${mapa.get(i)}</li>`);
+        }
+        document.write("</ul>")
+    </script>
+</body>
+</html>

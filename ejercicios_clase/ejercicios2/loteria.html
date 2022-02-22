@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const MAX_COMBINACIONES = 50;
+        const RANGO_SOLUCIONES = 6;
+        const combinacion = new Set();
+
+        //Hacemos un bucle donde hagamos las maximas combinaciones
+        for (i = 1; i <= MAX_COMBINACIONES; i++) {
+            //Printamos un h1
+            document.write("<h1>Combinacion " + i + ": <h1>");
+
+            //mientras las combinaciones no superen el rango de soluciones
+            //Crea combinaciones random y añadelas al set
+            do {
+                combinacion.add(parseInt(Math.random() * 49) + 1);
+            } while (combinacion.size < RANGO_SOLUCIONES);
+            //Lo que pasa aqui es que se repite un total de 50 veces (el numero)
+            //Mientras las combinaciones que van del 1 al 50 no superen un total
+            //de 6 numeros de 2 cifras seguira añadiendolo al set
+            // 123456 = 1 -- 2 = 213456 y asi hasta llegar a 50
+
+
+            document.write("<p>");
+            for(numero of combinacion){
+                document.write(numero);
+            }
+            document.write("</p>");
+
+            combinacion.clear();
+        }
+    </script>
+</body>
+
+</html>

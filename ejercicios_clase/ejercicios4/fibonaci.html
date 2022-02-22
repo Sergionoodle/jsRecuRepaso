@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fibon(x) {
+            if (x == 0) return 0;
+
+            else {
+                if (x == 1) return 1;
+                else return fibon(x - 1) + fibon(x - 2);
+            }
+        }
+
+        function fibon2(x) {
+            let acum1 = 0;
+            let acum2 = 1;
+            let acum3 = 1;
+
+            if (x == 0) return 0;
+            else {
+                if (x == 1) return 1;
+                else {
+                    for (let i = 2; i <= x; i++) {
+                        [acum1, acum2] = [acum2, acum3];
+                        acum3 = acum1 + acum2
+                    }
+                }
+                return acum3;
+            }
+        }
+
+        var numero;
+        const sucesion = [];
+
+        numero = prompt('Indica el límite que deseas');
+
+        if (numero != "" && numero != null) {
+            for (i = 0; i < numero; i++) {
+                sucesion[i] = fibon(i);
+            }
+            document.write(`<h1> Sucesión de Fibonacci hasta la ` +
+                `posición ${numero}</h1>`);
+            document.write(`<h2>${sucesion}</h2>`);
+
+        } else {
+            document.write('Se ha cancelado');
+        }
+    </script>
+</body>
+
+</html>
